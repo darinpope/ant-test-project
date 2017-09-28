@@ -1,5 +1,6 @@
 node('docker') {
     docker.image('darinpope/ant:latest').inside {
+        checkout scm
         sh '''
             java -version
             ant -version
