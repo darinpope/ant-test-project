@@ -5,7 +5,7 @@ node('docker') {
             java -version
             ant -version
             mvn -version
-            ant -Dsrc=src -Dbuild=build -Ddist=dist clean
+            ant -Dsrc=src -Dbuild=build -Ddist=dist -DbuildDir=${WORKSPACE} clean
         '''
     }
 }
