@@ -6,6 +6,7 @@ node('docker') {
             java -version
             ant -version
             mvn -version
+            wget http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.2-bin.tar.gz
             ant -Dsrc=src -Dbuild=build -Ddist=dist -DbuildDir=${WORKSPACE} clean dist
         '''
     }
